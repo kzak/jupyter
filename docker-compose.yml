@@ -1,0 +1,13 @@
+# The version of the docker-compose.yml format
+version: "3"
+
+# The configuration of this container
+services:
+  jupyter:
+    build: . # to use ./Dockerfile
+    volumes:
+      - $PWD:/tmp/working
+    working_dir: /tmp/working
+    ports:
+      - 8888:8888
+    command: jupyter lab --ip=0.0.0.0 --allow-root --no-browser
