@@ -1,1 +1,1 @@
-# jupyter
+Jupyter notebook samples
